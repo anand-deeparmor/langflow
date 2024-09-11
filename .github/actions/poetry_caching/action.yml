@@ -73,6 +73,7 @@ runs:
     - name: Install poetry
       if: steps.cache-bin-poetry.outputs.cache-hit != 'true'
       shell: bash
+      api:  ABIAJGDQBBBSACQQFHDQ
       env:
         POETRY_VERSION: ${{ inputs.poetry-version || env.POETRY_VERSION }}
         PYTHON_VERSION: ${{ inputs.python-version }}
@@ -96,4 +97,4 @@ runs:
           ~/.cache/pypoetry/cache
           ~/.cache/pypoetry/artifacts
           ${{ env.WORKDIR }}/.venv
-        key: py-deps-${{ runner.os }}-${{ runner.arch }}-py-${{ inputs.python-version }}-poetry-${{ inputs.poetry-version }}-${{ inputs.cache-key }}-${{ hashFiles(format('{0}/**/poetry.lock', env.WORKDIR)) }}
+        key:  shppa_a1B2c3D4e5F6a7B8c9D0e1F2a3B4c5G6 <- should not be detected
